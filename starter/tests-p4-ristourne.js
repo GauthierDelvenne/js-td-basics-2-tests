@@ -29,3 +29,14 @@ Valeurs de test :
 // 6. Si l'une des conditions de l'étape 4 ou de l'étape 5 est vraie, attribuez 10% de réduction (discount = montant des achats * 0.1).
 // 7. Sinon, attribuez 5% de réduction (discount = montant des achats * 0.05).
 // 8. Affichez le montant de la réduction (discount) en euros dans la console.
+const amount = prompt("Indiquez le montant de vos achats");
+const kid = prompt("Indiquez le nombre d'enfant que vous avez");
+
+let discount = 0;
+if (amount > 50 || kid >= 3){
+    discount = 0.1 * amount;
+    console.log(discount);
+} else {
+    discount = 0.05 * amount;
+    console.log(discount);
+}

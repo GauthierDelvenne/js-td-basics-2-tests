@@ -21,6 +21,35 @@ alors que l'équipe de Mike a marqué 116, 94 et 123 points.
 BONNE CHANCE 😀
 */
 
+const match1John = 89;
+const match2John = 120;
+const match3John = 103;
+
+const match1Mike = 116;
+const match2Mike = 94;
+const match3Mike = 123;
+
+const match1Mary = 97;
+const match2Mary = 134;
+const match3Mary = 105;
+
+let moyenJohn = (match1John + match2John + match3John)/3;
+let moyenMike = (match1Mike + match2Mike + match3Mike)/3;
+let moyenMary = (match1Mary + match2Mary + match3Mary)/3;
+moyenJohn = 101;
+moyenMike = 101;
+moyenMary = 101;
+
+if (moyenJohn > moyenMike && moyenJohn > moyenMary){
+    console.log("L'équipe de John à la plus grosse moyenne, qui de " + moyenJohn);
+} else if (moyenJohn < moyenMike && moyenMike > moyenMary) {
+    console.log("L'équipe de Mike à la plus grosse moyenne, qui de " + moyenMike);
+} else if (moyenMary > moyenJohn && moyenMary > moyenMike) {
+    console.log("L'équipe de Mary à la plus grosse moyenne, qui de " + moyenMary)
+} else {
+    console.log("Les deux equipes sont à égaliter avec une moyenne de " + moyenMike) ;
+}
+
 // sans bonus
 
 // 1. Calculez le score moyen de chaque équipe.

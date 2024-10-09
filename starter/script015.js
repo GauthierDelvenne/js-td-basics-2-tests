@@ -10,17 +10,30 @@
 // 15-1. - LES OPÉRATEURS LOGIQUES
 
 // 1°) L'opérateur logique ET
-
+console.log(2 > 1 && 2 > 1); // True
+console.log(2 < 1 && 2 < 1); // False
+console.log(2 > 1 && 2 < 1); // False
+console.log(2 < 1 && 2 > 1); // False
 // 1. Affichez dans la console le résultat de toutes les combinaisons possibles de true ET false
 // 2. Avant de lancer votre navigateur et d'ouvrir la console, notez ici pour chaque ligne le résultat attendu dans un commentaire
 
 // Une condition qui utilise l'opérateur logique ET
 
 // 1. Demandez à l'utilisateur d'entrer un nombre et stockez-le dans une variable nombre
+const message = prompt("Indiquez un nombre");
+const nombre1 = message;
+
 // 2. Testez si le nombre est dans l'intervalle [0, 100]. Autrement dit, testez si 0 <= nombre <= 100. Si c'est le cas, affichez "… est compris entre 0 et 100".
-
+if (message >= 0 && message <= 100){
+  console.log(message + " est compris entre 0 et 100");
+} else{
+  console.log(message + " n'est pas compris entre 0 et 100");
+}
 // 2°) L'opérateur logique OU
-
+console.log(2 > 1 || 2 > 1); // True
+console.log(2 < 1 || 2 < 1); // False
+console.log(2 > 1 || 2 < 1); // True
+console.log(2 < 1 || 2 > 1); // True
 // 1. Affichez dans la console le résultat de toutes les combinaisons possibles de true OU false
 // 2. Avant de lancer votre navigateur et d'ouvrir la console, notez ici pour chaque ligne le résultat attendu dans un commentaire
 
@@ -28,16 +41,23 @@
 
 // 1. Demandez à l'utilisateur d'entrer un nombre et stockez-le dans une variable nombre
 // 2. Testez si le nombre est en dehors de l'intervalle [0, 100]. Si c'est le cas, affichez "… est en dehors de l'intervalle [0, 100]".
-
+if (message < 0 || message > 100){
+  console.log(message + " est en dehors de l'intervalle [0, 100]");
+} else{
+  console.log(message + " est compris entre 0 et 100");
+}
 // 3°) L'opérateur logique NOT
 
 // Affichez dans la console le résultat NOT true puis le résultat de NOT false
-
+console.log(!(1>2)); // True
+console.log(!(1<2)); // False
 // Une condition qui utilise l'opérateur logique NOT
 
 // 1. Demandez à l'utilisateur d'entrer un nombre et stockez-le dans une variable nombre
 // 2. Si ce nombre n'est pas supérieur à 100, affichez "… est inférieur ou égal à 100".
-
+if (!(message>100)){
+  console.log(message + " est inférieur ou égal à 100");
+}
 // 15-2. - LES ALTERNATIVES MULTIPLES
 
 // 1°) Imbriquer des conditions
@@ -52,7 +72,12 @@
 // BUT : réaliser le même test que l'exercice précédent mais avec l'écriture if / elseif / else
 // 1. Demandez à l'utilisateur d'entrer un nombre et stockez-le dans une variable nombre
 // 2. Affichez "… est positif", "… est négatif" ou "… est nul" selon le cas
-
+if (message > 0){
+  console.log(message + " est positif");
+} else if (message === 0){
+  console.log(message + " est nul");
+} else if (message < 0)
+  console.log(message + " est négatif");
 // Une application
 
 // 1. Stockez le prénom de la personne dans une variable firstName
@@ -61,7 +86,19 @@
 // b) Si elle a entre 13 et 20 ans, affichez "… est un adolescent."
 // c) Si elle a entre 20 et 30 ans, affichez "… est un jeune homme."
 // d) sinon, affichez "… est un homme."
-
+const responseName = prompt("Quel est votre prénom");
+const responseAge = prompt("Quel est votre age");
+const fisrtName = responseName;
+const age = responseAge;
+if (responseAge<=13){
+  console.log(responseName + " est un petit garçon.");
+} else if (responseAge > 13 && responseAge <=20){
+  console.log(responseName + " est un adolescent.");
+} else if (responseAge > 20 && responseAge <=30){
+  console.log(responseName + " est un jeune homme.");
+} else if (responseAge > 30){
+  console.log(responseName + " est un homme");
+}
 // Autre application
 
 // 1. Demandez à l'utilisateur d'entrer l'information
@@ -73,3 +110,27 @@
 // c) s'il pleut, affichez "Sortez en blouson."
 // d) s'il neige, affichez "Restez au chaud à la maison."
 // e) dans tous les autres cas (si la personne n'a
+const meteo = prompt("Quel temps fait-il dehors ? Répondez par un des quatre mots suivants :\nsoleil, vent, pluie ou neige.");
+
+if (meteo === "soleil"){
+  console.log("Sortez en t-shirt.");
+} else if (meteo === "vent") {
+  console.log("Sortez en pull.");
+} else if (meteo === "pluie") {
+  console.log("Sortez en blouson.");
+} else if (meteo === "neige"){
+  console.log("Restez au chaud à la maison.");
+} else {
+  console.log("Vous n’avez pas mis un des mots : soleil, vent, pluie ou neige.")
+}
+
+
+
+
+
+
+
+
+
+
+

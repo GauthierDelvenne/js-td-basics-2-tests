@@ -26,3 +26,14 @@ Tester avec des montants d'achat de
 //       Assurez-vous que le montant versé aux restos du cœur ne dépasse pas 2€ (utilisez Math.min(2, montant versé)).
 //    b) Si la condition est fausse, la somme versée aux restos du cœur est de 0€.
 // 4. Affichez la somme versée aux restos du cœur dans la console.
+const amount = prompt("Indiquez le montant de votre achat");
+let bill = amount;
+if (amount > 25){
+    discount = (0.1 * bill);
+    bill = bill - discount;
+    console.log(bill);
+}
+if (discount > 5){
+    const heart = Math.min(2, (0.1 * discount));
+    console.log(heart);
+}
